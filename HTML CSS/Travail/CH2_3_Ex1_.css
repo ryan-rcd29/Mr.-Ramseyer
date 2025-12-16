@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-image: url('../Travail/pingouin.png'), url('../Travail/feuilles.png');
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, scroll;
+    background-position: center top, 0 0;
+}
+
+h1:first-of-type {
+    color: purple;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: white;
+}
+
+p {
+    margin-bottom: 10px;
+    color: white;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b;
+}

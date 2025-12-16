@@ -1,0 +1,58 @@
+body {
+    background-color: gray;
+    background-size: cover;
+}
+
+h1 {
+    color : white
+}
+
+h2 {
+    color : white
+}
+
+.fondbleu{
+    background-color: rgb(96, 158, 238);
+    border-top: 10px #f59a13 dashed;
+    border-right: 10px #f59a13 dashed;
+    border-bottom: 10px #f59a13 dashed;
+    border-left: 10px #f59a13 dashed;
+    background-image: url("./pingouin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 40px;
+    margin-left : 30px;
+}
+
+.fondvert{
+    background-color: rgb(10, 129, 50);
+    border-top: 10px #f59a13 dashed;
+    border-right: 10px #f59a13 dashed;
+    border-bottom: 10px #f59a13 dashed;
+    border-left: 10px #f59a13 dashed;
+    background-image: url("./pingouin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 40px;
+    margin-left : 30px;
+}
+
+.fondrose{
+    background-color: rgb(187, 22, 159);
+    border-top: 10px #f59a13 dashed;
+    border-right: 10px #f59a13 dashed;
+    border-bottom: 10px #f59a13 dashed;
+    border-left: 10px #f59a13 dashed;
+    background-image: url("./pingouin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left : 30px;
+}
+
+p{
+    color : white;
+}
+
+p1{
+    color : white
+}

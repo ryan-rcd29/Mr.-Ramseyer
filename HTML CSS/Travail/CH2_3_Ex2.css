@@ -1,0 +1,37 @@
+h1{
+    color : rgb(223, 15, 223);
+    font-size : 50px
+}
+
+h2{
+    color : white
+}
+
+
+body {
+    background-color: green;
+    background-size: cover;
+    background-image: url("./pingouin.png");
+}
+
+
+.fond-rose {
+    background-color: rgb(230, 111, 131);
+    height : 80%;
+    opacity: 70%;
+}
+
+.fond-rouge {
+    background-color: red;
+    background-image: url("pingouin.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 50px;
+    margin-right: 50px;    
+}
+
+
+.footer a {
+    margin: 0 10px;
+}
