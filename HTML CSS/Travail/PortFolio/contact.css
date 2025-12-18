@@ -1,0 +1,179 @@
+
+/* Section principale */
+.contact-section {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+/* Carte contenant le formulaire */
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+/* Grille du formulaire */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Champs du formulaire */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  padding: .85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  outline: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+/* Ligne avec deux colonnes */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Bouton et actions */
+.actions {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  padding: .9rem 1.2rem;
+  border-radius: 10px;
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: #5a4bd6;
+}
+
+/* Messages de statut */
+.status {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+}
+
+.status.success {
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid #2ecc71;
+}
+
+
+.status.error {
+  background: rgba(231, 76, 60, 0.15);
+  border: 1px solid #e74c3c;
+}
+
+/* Texte d'aide */
+.hint {
+  font-size: .9rem;
+  opacity: .8;
+}
+
+/* Champ honeypot (anti-spam) */
+.hp-wrap {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+.normal {
+  color: white;
+  text-decoration: none;
+}
+.lien {
+  color: white;
+}
+
+/* Assure l’alignement du header */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;           /* espace entre nav et icône */
+  padding: 0 1rem;     /* optionnel, selon ton layout */
+}
+
+/* La nav prend la place à gauche */
+.site-header .nav {
+  display: flex;
+  gap: .5rem;
+  flex: 1;             /* pousse l’icône vers la droite */
+}
+
+/* Icône flèche retour à droite */
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;          /* taille finale de l’icône */
+  height: 28px;
+   color: #fff;          /* hérite ton thème ; ajuste si besoin */
+  text-decoration: none;
+  border-radius: 50%;
+  transition: transform .12s ease, opacity .2s ease, background .2s ease;
+}
+
+/* Si tu utilises un SVG inline : il s’adapte à la boîte */
+.back-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Si tu utilises une image (png/svg externe) */
+.back-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* évite la déformation */
+}
+
+/* Variante caractère (emoji/entité HTML) */
+.back-arrow {
+  font-size: 20px;       /* effective pour le caractère */
+  line-height: 1;
+}
+
+/* Effet hover (optionnel, assorti à ton accent #6c5ce7) */
+.back-arrow:hover {
+  opacity: 0.9;
+  background: rgba(108, 92, 231, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Réduction sur mobile si nécessaire */
+@media (max-width: 420px) {
+  .back-arrow {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;     /* pour la variante caractère */
+  }
+}

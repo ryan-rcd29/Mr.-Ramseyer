@@ -3,8 +3,8 @@
 :root{
   --bg-start:#0f1220;
   --bg-end:#1b1f36;
-  --accent:#7c5cff;
-  --accent-2:#29d3a0;
+  --accent:#ffffff;
+  --accent-2:#6644c4;
   --text:#e8e9ee;
   --muted:#b8bbcc;
 
@@ -178,15 +178,32 @@ body{
 }
 .project-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,.45); }
 
-.project-cover{
+.project-cover1{
   height: 120px;
-  background:
-    linear-gradient(135deg, rgba(124,92,255,.25), rgba(41,211,160,.25)),
-    repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 8px, rgba(0,0,0,.08) 8px 16px);
+  background-image: url("https://cyber.corsica/wp-content/uploads/2023/10/Logo-ANSSI-ecriture.png");
+  background-size: cover;
+  background-position: center;
 }
-.cover-2{ background: linear-gradient(135deg, rgba(41,211,160,.25), rgba(255,143,90,.25)), repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 8px, rgba(0,0,0,.08) 8px 16px); }
-.cover-3{ background: linear-gradient(135deg, rgba(255,143,90,.25), rgba(124,92,255,.25)), repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 8px, rgba(0,0,0,.08) 8px 16px); }
-.cover-4{ background: linear-gradient(135deg, rgba(255,143,90,.25), rgba(124,92,255,.25)), repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 8px, rgba(0,0,0,.08) 8px 16px); }
+.project-cover2{
+  height: 120px;
+  background-image: url("https://lareclame.fr/wp-content/uploads/2024/07/cnil-top.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.project-cover3{
+  height: 120px;
+  background-image: url("https://www.ac-polynesie.pf/sites/ac_polynesie/files/2023-03/certification-pix-aide-png---cloned-21509.png");
+  background-size: cover;
+  background-position: center;
+}
+.project-cover4{
+  height: 120px;
+  background-image: url("https://www.u-picardie.fr/sites/default/files/styles/large/public/media/2024-07/logoecriplus.png?itok=IqxBDUbq");
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 .project-content{
   padding: 16px 16px 18px;
