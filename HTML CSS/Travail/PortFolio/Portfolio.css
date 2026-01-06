@@ -314,3 +314,23 @@ body{
 .lien {
   color: white;
 }
+
+.accordion {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .accordion-item {
+        border-bottom: 1px solid #ccc;
+    }
+    .accordion-header {
+        background: #f4f4f4;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        background: #fff;
+    }
