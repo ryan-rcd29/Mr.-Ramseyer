@@ -4,7 +4,7 @@
   --bg-start:#0f1220;
   --bg-end:#1b1f36;
   --accent:#ffffff;
-  --accent-2:#6644c4;
+  --accent-2:#fff;
   --text:#e8e9ee;
   --muted:#b8bbcc;
 
@@ -60,6 +60,14 @@ body{
   gap:10px;
   align-items:center;
   justify-content:flex-end;
+}
+.nav1{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 20px;
+  display:flex;
+  gap:10px;
+  align-items:center;
 }
 .nav-link{
   color: var(--muted);
@@ -198,7 +206,13 @@ body{
 }
 .project-cover4{
   height: 120px;
-  background-image: url("https://www.u-picardie.fr/sites/default/files/styles/large/public/media/2024-07/logoecriplus.png?itok=IqxBDUbq");
+  background-image: url("https://www.univ-lyon2.fr/medias/photo/logoecriplus_1643360304862-png");
+  background-size: cover;
+  background-position: center;
+}
+.project-cover5{
+  height: 120px;
+  background-image: url("https://club-ebios.org/site/wp-content/uploads/site-images/ClubEBIOS-Logo.png");
   background-size: cover;
   background-position: center;
 }
@@ -208,6 +222,7 @@ body{
 .project-content{
   padding: 16px 16px 18px;
 }
+
 .project-content h3{
   margin: 6px 0 8px;
   font-size: 1.05rem;
@@ -217,11 +232,6 @@ body{
   color: var(--muted);
   line-height: 1.5;
 }
-
-.actions{
-  display:flex; gap:10px;
-}
-
 /* Boutons */
 .btn{
   --btn-bg: rgba(255,255,255,0.06);
@@ -334,3 +344,37 @@ body{
         padding: 10px;
         background: #fff;
     }
+    
+.certifications-container {
+  display: flex;
+  gap: 20px;
+}
+
+.cnil-card {
+  flex: 0.5; /* CNIL prend plus d'espace */
+  display: flex;
+  flex-direction: column;
+  background: #1e1e2f;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cnil-card .actions a {
+  display: block;
+  margin: 3px 0;
+}
+
+.modules-droite {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 10px;
+}
+
+.project-card {
+  background: #2a2a3d;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+}
+
