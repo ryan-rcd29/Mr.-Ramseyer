@@ -216,13 +216,24 @@ body{
   background-size: cover;
   background-position: center;
 }
+.project-cover6{
+  height: 120px;
+  background-image: url("https://cdn.freebiesupply.com/logos/large/2x/portfolio-logo-svg-vector.svg");
+  background-size: cover;
+  background-position: center;
+}
+.project-cover7{
+  height: 120px;
+  background-image: url("https://solnum.b-cdn.net/wp-content/uploads/2020/06/logo-xefi.png");
+  background-size: cover;
+  background-position: center;
+}
 
 
 
 .project-content{
   padding: 16px 16px 18px;
 }
-
 .project-content h3{
   margin: 6px 0 8px;
   font-size: 1.05rem;

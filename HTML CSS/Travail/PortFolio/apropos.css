@@ -43,11 +43,11 @@ body{
 .container{ max-width: var(--max); margin: 0 auto; padding: px 10px; position:relative; z-index:1; }
 .card{
   background: var(--card-bg);
-  border: 0.5px solid var(--card-stroke);
+  border: 1px solid var(--card-stroke);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 10px;
-  margin : auto;
+  margin : 250px;
 }
 .section-title{ margin:0 0 12px; font-size: clamp(1.5rem, 3vw, 1.9rem); letter-spacing: -.01em; }
 .muted{ color: var(--muted); }
@@ -182,4 +182,12 @@ body{
 .normal {
   color: white;
   text-decoration: none;
+}
+/* Footer */
+.site-footer{
+  max-width:1100px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+  color: var(--muted);
+  text-align:center;
 }
