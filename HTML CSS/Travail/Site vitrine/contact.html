@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - La Fabric de Bougies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container navbar-content">
+        <div class="logo">
+            <img src="../Site vitrine/Image/Logo .png" alt="La Fabric de Bougies - Logo">
+            <h1>La Fabric de Bougies</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Page d'accueil.html">Accueil</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2 class="hero-title">Contactez-Nous</h2>
+            <p class="hero-slogan">Nous sommes à votre écoute</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="activite" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nous Vous Répondrons Rapidement</h2>
+            <p class="subtitle">Vos questions sont importantes pour nous</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+            <!-- FORMULAIRE -->
+            <div>
+                <form style="background: var(--light); padding: 2rem; border-radius: var(--border-radius);">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary); font-weight: 600;">Nom</label>
+                        <input type="text" placeholder="Votre nom" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary); font-weight: 600;">Email</label>
+                        <input type="email" placeholder="votre@email.com" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary); font-weight: 600;">Sujet</label>
+                        <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                            <option>Sélectionner un sujet</option>
+                            <option>Commande</option>
+                            <option>Partenariat</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary); font-weight: 600;">Message</label>
+                        <textarea placeholder="Votre message..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; height: 120px;"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%;">Envoyer le Message</button>
+                </form>
+            </div>
+
+            <!-- INFORMATIONS -->
+            <div>
+                <div style="background: var(--light); padding: 2rem; border-radius: var(--border-radius); margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">📍 Adresse</h3>
+                    <p>La Fabric de Bougies<br>
+                    123 Rue de la Créativité<br>
+                    75000 Paris, France</p>
+                </div>
+
+                <div style="background: var(--light); padding: 2rem; border-radius: var(--border-radius); margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">📞 Téléphone</h3>
+                    <p><a href="tel:+33123456789" style="color: var(--primary); text-decoration: none;">+33 (0)1 23 45 67 89</a></p>
+                </div>
+
+                <div style="background: var(--light); padding: 2rem; border-radius: var(--border-radius);">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">✉️ Email</h3>
+                    <p><a href="mailto:contact@lafabricdebougies.fr" style="color: var(--primary); text-decoration: none;">contact@lafabricdebougies.fr</a></p>
+                </div>
+
+                <div style="background: var(--light); padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">🕒 Horaires</h3>
+                    <p>Lundi - Vendredi : 9h - 18h<br>
+                    Samedi : 10h - 14h<br>
+                    Dimanche : Fermé</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Explorez Notre Boutique</h2>
+        <p>Découvrez nos produits et créez votre ambiance parfaite</p>
+        <button class="btn btn-primary btn-lg" onclick="window.location.href='produits.html'">Voir les Produits</button>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="activite.html">Notre Activité</a></li>
+                    <li><a href="equipe.html">Notre Équipe</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Produits</h4>
+                <ul>
+                    <li><a href="produits.html">Collections</a></li>
+                    <li><a href="produits.html">Formats</a></li>
+                    <li><a href="produits.html">Nouveautés</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Service Client</h4>
+                <ul>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 La Fabric de Bougies. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
