@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,571 +9,669 @@
     <link rel="stylesheet" href="produits.css">
     <script src="livraison.js"></script>
 </head>
+
 <body>
 
-<!-- ========== NAVIGATION ========== -->
-<nav class="navbar">
-    <div class="container navbar-content">
-        <div class="logo">
-            <img src="../Site vitrine/Image/Logo .png" alt="La Fabric de Bougies - Logo">
-            <h1>La Fabric de Bougies</h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="Page d'accueil.html">Accueil</a></li>
-            <li><a href="histoire.html">Histoire</a></li>
-            <li><a href="equipe.html">Équipe</a></li>
-            <li><a href="produits.html">Produits</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="cart-icon" onclick="toggleCart()">
-            <span class="cart-count" id="cart-count">0</span>
-            🛒
-        </div>
-    </div>
-</nav>
-
-<!-- ========== HERO SECTION ========== -->
-<section class="hero" id="produits">
-    <div class="container">
-        <div class="hero-content">
-            <h2 class="hero-title">Nos Produits</h2>
-            <p class="hero-slogan">Découvrez nos créations artisanales</p>
-        </div>
-    </div>
-</section>
-
-<!-- ========== COLLECTIONS THÉMATIQUES ========== -->
-<section class="produits">
-    <div class="container">
-        <div class="section-header">
-            <h2>Collections Thématiques</h2>
-            <p class="subtitle">Chaque collection raconte une histoire</p>
-        </div>
-        
-        <!-- RUBRIQUES/CATÉGORIES -->
-        <div class="filter-section">
-            <h3>Filtrer par catégorie</h3>
-            <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterProducts('all')">Tous</button>
-                <button class="filter-btn" onclick="filterProducts('cosy')">Cosy</button>
-                <button class="filter-btn" onclick="filterProducts('nature')">Nature</button>
-                <button class="filter-btn" onclick="filterProducts('fetes')">Fêtes</button>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <img src="../Site vitrine/Image/Logo .png" alt="La Fabric de Bougies - Logo">
+                <h1>La Fabric de Bougies</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Page d'accueil.html">Accueil</a></li>
+                <li><a href="histoire.html">Histoire</a></li>
+                <li><a href="equipe.html">Équipe</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <span class="cart-count" id="cart-count">0</span>
+                🛒
             </div>
         </div>
-        
-        <div class="produits-grid" id="products-grid">
-            <!-- PRODUITS COSY -->
-            <div class="produit-card" data-category="cosy">
-                <div class="produit-badge">Cosy</div>
-                <div class="produit-image"><img src="Image/Bougies Vanille, Canelle.png" alt="Bougie Cosy"></div>
-                <h4>Ambiance Cosy - Vanille, Cannelle</h4>
-                <p class="produit-desc">Vanille, Cannelle</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Vanille</span>
-                    <span class="badge-tag">Cannelle</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Créez une atmosphère chaleureuse et accueillante.</p>
-                <div class="price-section">
-                    <span class="price">6€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="10">
-                <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Vanille, Cannelle', 6)">Ajouter au panier</button>
-            </div>
+    </nav>
 
-            
-
-            <!-- PRODUITS NATURE -->
-            <div class="produit-card" data-category="cosy">
-                <div class="produit-badge">Cosy</div>
-                <div class="produit-image"><img src="Image/Bougies Noix de coco.png" alt="Bougie Noix de coco"></div>
-                <h4>Ambiance Cosy - Noix de coco</h4>
-                <p class="produit-desc">Noix de coco</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Noix de coco</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Respirez la senteur des îles dans votre maison</p>
-                <div class="price-section">
-                    <span class="price">6€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="10">
-                <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Noix de coco', 6)">Ajouter au panier</button>
-            </div>
-
-            <!-- PRODUITS NATURE -->
-            <div class="produit-card" data-category="cosy">
-                <div class="produit-badge">Cosy</div>
-                <div class="produit-image"><img src="Image/Bougies Noix de coco.png" alt="Bougie Noix de coco"></div>
-                <h4>Ambiance Cosy - Noix de coco</h4>
-                <p class="produit-desc">Noix de coco</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Noix de coco</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Respirez la senteur des îles dans votre maison</p>
-                <div class="price-section">
-                    <span class="price">6€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="10">
-                <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Noix de coco', 6)">Ajouter au panier</button>
-            </div>
-
-            <!-- PRODUITS FÊTES - NOËL -->
-            <div class="produit-card" data-category="fetes">
-                <div class="produit-badge">Noël</div>
-                <div class="produit-image"><img src="Image/noel.jpg" alt="Édition Noël"></div>
-                <h4>Édition Noël - Grand Format</h4>
-                <p class="produit-desc">Houx, Pain d'épice</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Houx</span>
-                    <span class="badge-tag">Pain d'épice</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Plongez dans l'ambiance festive. Collection limitée.</p>
-                <div class="price-section">
-                    <span class="price">39€</span>
-                    <span class="stock limited">Stock limité</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="5">
-                <button class="btn btn-secondary" onclick="addToCart('Édition Noël', 39)">Ajouter au panier</button>
-            </div>
-
-            <!-- PRODUITS FÊTES - HALLOWEEN -->
-            <div class="produit-card" data-category="fetes">
-                <div class="produit-badge">Halloween</div>
-                <div class="produit-image"><img src="Image/halloween.jpg" alt="Édition Halloween"></div>
-                <h4>Édition Halloween - Moyen</h4>
-                <p class="produit-desc">Citrouille, Mystère</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Citrouille</span>
-                    <span class="badge-tag">Mystère</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Atmosphère magique d'Halloween. Parfums mystérieux.</p>
-                <div class="price-section">
-                    <span class="price">29€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="10">
-                <button class="btn btn-secondary" onclick="addToCart('Édition Halloween', 29)">Ajouter au panier</button>
-            </div>
-
-            <!-- COFFRET CADEAU -->
-            <div class="produit-card" data-category="cosy">
-                <div class="produit-badge">Pack</div>
-                <div class="produit-image"><img src="Image/coffret.jpg" alt="Coffret Cosy Deluxe"></div>
-                <h4>Coffret Cosy Deluxe</h4>
-                <p class="produit-desc">Pack de 3 bougies assorties</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Pack Spécial</span>
-                    <span class="badge-tag">-15%</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">3 bougies Cosy sélectionnées avec soin.</p>
-                <div class="price-section">
-                    <span class="price">59€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="5">
-                <button class="btn btn-secondary" onclick="addToCart('Coffret Cosy Deluxe', 59)">Ajouter au panier</button>
-            </div>
-
-            <!-- PRODUIT NATURE PREMIUM -->
-            <div class="produit-card" data-category="nature">
-                <div class="produit-badge">Premium</div>
-                <div class="produit-image"><img src="Image/premium.jpg" alt="Nature Premium"></div>
-                <h4>Nature Premium - Sapin & Menthe</h4>
-                <p class="produit-desc">Sapin, Menthe poivrée</p>
-                <div class="produit-details">
-                    <span class="badge-tag">Premium</span>
-                    <span class="badge-tag">Bio</span>
-                </div>
-                <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Cire 100% naturelle. Essence pure.</p>
-                <div class="price-section">
-                    <span class="price">45€</span>
-                    <span class="stock">En stock</span>
-                </div>
-                <input type="number" class="quantity" min="1" value="1" max="10">
-                <button class="btn btn-secondary" onclick="addToCart('Nature Premium', 45)">Ajouter au panier</button>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="produits">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Nos Produits</h2>
+                <p class="hero-slogan">Découvrez nos créations artisanales</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ========== PANIER LATÉRAL ========== -->
-<div class="cart-sidebar" id="cart-sidebar">
-    <div class="cart-header">
-        <h3>Mon Panier</h3>
-        <button class="close-cart" onclick="toggleCart()">✕</button>
-    </div>
-    <div class="cart-items" id="cart-items">
-        <p class="empty-cart">Votre panier est vide</p>
-    </div>
-    <div class="cart-footer">
-        <div class="cart-total">
-            <span>Sous-total:</span>
-            <span id="cart-subtotal">0€</span>
+    <!-- ========== COLLECTIONS THÉMATIQUES ========== -->
+    <section class="produits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Collections Thématiques</h2>
+                <p class="subtitle">Chaque collection raconte une histoire</p>
+            </div>
+
+            <!-- RUBRIQUES/CATÉGORIES -->
+            <div class="filter-section">
+                <h3>Filtrer par catégorie</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">Tous</button>
+                    <button class="filter-btn" onclick="filterProducts('cosy')">Cosy</button>
+                    <button class="filter-btn" onclick="filterProducts('nature')">Nature</button>
+                    <button class="filter-btn" onclick="filterProducts('fetes')">Fêtes</button>
+                </div>
+            </div>
+
+            <div class="produits-grid" id="products-grid">
+                <!-- PRODUITS COSY -->
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Vanille et Cannelle.png" alt="Bougie Cosy"></div>
+                    <h4>Ambiance Cosy - Vanille, Cannelle</h4>
+                    <p class="produit-desc">Vanille, Cannelle</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Vanille</span>
+                        <span class="badge-tag">Cannelle</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="addToCart('Ambiance Cosy - Vanille, Cannelle', 6)">Ajouter au panier</button>
+                </div>
+
+
+
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Noix de coco.png" alt="Bougie Noix de coco">
+                    </div>
+                    <h4>Ambiance Cosy - Noix de coco</h4>
+                    <p class="produit-desc">Noix de coco</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Noix de coco</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Noix de coco', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Fruit Rouges.png" alt="Bougie Noix de coco">
+                    </div>
+                    <h4>Ambiance Cosy - Fruit Rouges</h4>
+                    <p class="produit-desc">Fruit Rouges</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Fraise</span>
+                        <span class="badge-tag">Framboise</span>
+                        <span class="badge-tag">Myrtille</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Fruit Rouges', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Framboise et Menthe Poivrée.png"
+                            alt="Bougie Framboise, Menthe">
+                    </div>
+                    <h4>Ambiance Cosy - Framboise et Menthe Poivrée</h4>
+                    <p class="produit-desc">Framboise et Menthe Poivrée</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Framboise</span>
+                        <span class="badge-tag">Menthe</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="addToCart('Ambiance Cosy - Framboise et Menthe Poivrée', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Noix de coco.png" alt="Bougie Noix de coco">
+                    </div>
+                    <h4>Ambiance Cosy - Noix de coco</h4>
+                    <p class="produit-desc">Noix de coco</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Noix de coco</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Noix de coco', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Fruit Rouges.png" alt="Bougie Noix de coco">
+                    </div>
+                    <h4>Ambiance Cosy - Fruit Rouges</h4>
+                    <p class="produit-desc">Fruit Rouges</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Fraise</span>
+                        <span class="badge-tag">Framboise</span>
+                        <span class="badge-tag">Myrtille</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Ambiance Cosy - Fruit Rouges', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Bougies Framboise et Menthe Poivrée.png"
+                            alt="Bougie Framboise, Menthe">
+                    </div>
+                    <h4>Ambiance Cosy - Framboise et Menthe Poivrée</h4>
+                    <p class="produit-desc">Framboise et Menthe Poivrée</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Framboise</span>
+                        <span class="badge-tag">Menthe</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">6€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="addToCart('Ambiance Cosy - Framboise et Menthe Poivrée', 6)">Ajouter au
+                        panier</button>
+                </div>
+
+                <!-- PRODUITS FÊTES - NOËL -->
+                <div class="produit-card" data-category="fetes">
+                    <div class="produit-badge">Noël</div>
+                    <div class="produit-image"><img src="Image/noel.jpg" alt="Édition Noël"></div>
+                    <h4>Édition Noël - Grand Format</h4>
+                    <p class="produit-desc">Houx, Pain d'épice</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Houx</span>
+                        <span class="badge-tag">Pain d'épice</span>
+                    </div>
+                    <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Plongez dans l'ambiance festive.
+                        Collection limitée.</p>
+                    <div class="price-section">
+                        <span class="price">39€</span>
+                        <span class="stock limited">Stock limité</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="5">
+                    <button class="btn btn-secondary" onclick="addToCart('Édition Noël', 39)">Ajouter au panier</button>
+                </div>
+
+                <!-- PRODUITS FÊTES - HALLOWEEN -->
+                <div class="produit-card" data-category="fetes">
+                    <div class="produit-badge">Halloween</div>
+                    <div class="produit-image"><img src="Image/halloween.jpg" alt="Édition Halloween"></div>
+                    <h4>Édition Halloween - Moyen</h4>
+                    <p class="produit-desc">Citrouille, Mystère</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Citrouille</span>
+                        <span class="badge-tag">Mystère</span>
+                    </div>
+                    <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Atmosphère magique d'Halloween. Parfums
+                        mystérieux.</p>
+                    <div class="price-section">
+                        <span class="price">29€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Édition Halloween', 29)">Ajouter au
+                        panier</button>
+                </div>
+
+                <!-- COFFRET CADEAU -->
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Pack</div>
+                    <div class="produit-image"><img src="Image/coffret.jpg" alt="Coffret Cosy Deluxe"></div>
+                    <h4>Coffret Cosy Deluxe</h4>
+                    <p class="produit-desc">Pack de 3 bougies assorties</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Pack Spécial</span>
+                        <span class="badge-tag">-15%</span>
+                    </div>
+                    <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">3 bougies Cosy sélectionnées avec soin.
+                    </p>
+                    <div class="price-section">
+                        <span class="price">59€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="5">
+                    <button class="btn btn-secondary" onclick="addToCart('Coffret Cosy Deluxe', 59)">Ajouter au
+                        panier</button>
+                </div>
+
+                <!-- PRODUIT NATURE PREMIUM -->
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Premium</div>
+                    <div class="produit-image"><img src="Image/premium.jpg" alt="Nature Premium"></div>
+                    <h4>Nature Premium - Sapin & Menthe</h4>
+                    <p class="produit-desc">Sapin, Menthe poivrée</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Premium</span>
+                        <span class="badge-tag">Bio</span>
+                    </div>
+                    <p style="color: #888; margin: 0.5rem 0; font-size: 0.9rem;">Cire 100% naturelle. Essence pure.</p>
+                    <div class="price-section">
+                        <span class="price">45€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary" onclick="addToCart('Nature Premium', 45)">Ajouter au
+                        panier</button>
+                </div>
+            </div>
         </div>
-        <button class="btn btn-primary" onclick="goToCheckout()" style="width: 100%; margin-top: 1rem;">Procéder à la commande</button>
-    </div>
-</div>
+    </section>
 
-<!-- OVERLAY PANIER -->
-<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-
-<!-- ========== MODAL COMMANDE ========== -->
-<div class="modal" id="checkout-modal">
-    <div class="modal-content">
-        <button class="modal-close" onclick="closeCheckout()">✕</button>
-        <h2>Récapitulatif de Commande</h2>
-        
-        <div class="order-summary" id="order-summary">
-            <!-- Les articles du panier s'afficheront ici -->
+    <!-- ========== PANIER LATÉRAL ========== -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mon Panier</h3>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
         </div>
-
-        <div class="order-totals">
-            <div class="total-row">
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Votre panier est vide</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
                 <span>Sous-total:</span>
-                <span id="modal-subtotal">0€</span>
+                <span id="cart-subtotal">0€</span>
             </div>
-            <div class="total-row">
-                <span>Livraison:</span>
-                <span id="shipping-cost">0€</span>
-            </div>
-            <div class="total-row">
-                <span>TVA (20%):</span>
-                <span id="tax-amount">0€</span>
-            </div>
-            <div class="total-row total">
-                <span>Total TTC:</span>
-                <span id="modal-total">0€</span>
-            </div>
+            <button class="btn btn-primary" onclick="goToCheckout()" style="width: 100%; margin-top: 1rem;">Procéder à
+                la commande</button>
         </div>
+    </div>
 
-        <form id="checkout-form">
-            <h3>Vos Informations</h3>
-            
-            <div class="form-group">
-                <label>Nom complet *</label>
-                <input type="text" required>
+    <!-- OVERLAY PANIER -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- ========== MODAL COMMANDE ========== -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCheckout()">✕</button>
+            <h2>Récapitulatif de Commande</h2>
+
+            <div class="order-summary" id="order-summary">
+                <!-- Les articles du panier s'afficheront ici -->
             </div>
 
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Téléphone *</label>
-                <input type="tel" required>
-            </div>
-
-            <div class="form-group">
-                <label>Adresse de livraison *</label>
-                <input type="text" required>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Code postal *</label>
-                    <input type="text" required>
+            <div class="order-totals">
+                <div class="total-row">
+                    <span>Sous-total:</span>
+                    <span id="modal-subtotal">0€</span>
                 </div>
-                <div class="form-group">
-                    <label>Ville *</label>
-                    <input type="text" required>
+                <div class="total-row">
+                    <span>Livraison:</span>
+                    <span id="shipping-cost">0€</span>
+                </div>
+                <div class="total-row">
+                    <span>TVA (20%):</span>
+                    <span id="tax-amount">0€</span>
+                </div>
+                <div class="total-row total">
+                    <span>Total TTC:</span>
+                    <span id="modal-total">0€</span>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>Distance de livraison (km) *</label>
-                <input type="number" id="shipping-distance" min="0" step="0.1" placeholder="Ex: 15.5" required onchange="updateShippingDisplay()">
-                <small style="color: #666; margin-top: 0.3rem; display: block;">Tarif: 2€ + 0.50€/km</small>
-            </div>
+            <form id="checkout-form">
+                <h3>Vos Informations</h3>
 
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" required>
-                    J'accepte les conditions de vente
-                </label>
-            </div>
+                <div class="form-group">
+                    <label>Nom complet *</label>
+                    <input type="text" required>
+                </div>
 
-            <h3 style="margin-top: 2rem;">Mode de Livraison</h3>
-            <div class="shipping-options">
-                <label class="radio-option">
-                    <input type="radio" name="shipping" value="distance" checked onchange="updateShippingDisplay()">
-                    <span>Livraison à Distance <span id="shipping-distance-cost"></span></span>
-                </label>
-                <label class="radio-option">
-                    <input type="radio" name="shipping" value="pickup" onchange="updateShipping(0)">
-                    <span>Retrait sur place (Gratuit)</span>
-                </label>
-            </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" required>
+                </div>
 
-            <h3 style="margin-top: 2rem;">Moyens de Paiement</h3>
-            <div class="payment-methods">
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="card" checked>
-                    <span>💳 Carte bancaire</span>
-                </label>
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="paypal">
-                    <span>🅿️ PayPal</span>
-                </label>
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="transfer">
-                    <span>🏦 Virement bancaire</span>
-                </label>
-            </div>
+                <div class="form-group">
+                    <label>Téléphone *</label>
+                    <input type="tel" required>
+                </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1rem;">
-                Confirmer la Commande
-            </button>
-        </form>
-    </div>
-</div>
+                <div class="form-group">
+                    <label>Adresse de livraison *</label>
+                    <input type="text" required>
+                </div>
 
-<!-- ========== MODAL CONFIRMATION ========== -->
-<div class="modal" id="confirmation-modal">
-    <div class="modal-content confirmation">
-        <div class="confirmation-icon">✓</div>
-        <h2>Commande Confirmée !</h2>
-        <p>Merci <span id="customer-name"></span>, votre commande a été enregistrée.</p>
-        <div class="order-details">
-            <p><strong>Numéro de commande:</strong> <span id="order-number"></span></p>
-            <p><strong>Total:</strong> <span id="confirmation-total"></span></p>
-            <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">Un email de confirmation a été envoyé à votre adresse.</p>
-        </div>
-        <button class="btn btn-primary" onclick="continueShop()" style="width: 100%;">Continuer mes achats</button>
-    </div>
-</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Code postal *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ville *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
 
-<!-- ========== FORMATS DE PRODUITS ========== -->
-<section class="produits" style="background: var(--light);">
-    <div class="container">
-        <div class="section-header">
-            <h2>Nos Formats</h2>
-            <p class="subtitle">Choisissez le format qui vous convient</p>
-        </div>
-        
-        <div class="formats-grid">
-            <div class="format-card">
-                <div class="format-icon">🪴</div>
-                <h4>Bougies en Pot</h4>
-                <p>Design élégant pour une ambiance chaleureuse. Parfaits pour le décor de votre intérieur.</p>
-                <div class="price">À partir de 24€</div>
-                <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
-            </div>
+                <div class="form-group">
+                    <label>Distance de livraison (km) *</label>
+                    <input type="number" id="shipping-distance" min="0" step="0.1" placeholder="Ex: 15.5" required
+                        onchange="updateShippingDisplay()">
+                    <small style="color: #666; margin-top: 0.3rem; display: block;">Tarif: 2€ + 0.50€/km</small>
+                </div>
 
-            <div class="format-card">
-                <div class="format-icon">💎</div>
-                <h4>Bougies Décoratives</h4>
-                <p>Formes originales et couleurs chatoyantes pour un style unique. Art et parfum réunis.</p>
-                <div class="price">À partir de 19€</div>
-                <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
-            </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" required>
+                        J'accepte les conditions de vente
+                    </label>
+                </div>
 
-            <div class="format-card">
-                <div class="format-icon">🎁</div>
-                <h4>Coffrets Cadeaux</h4>
-                <p>Collections curatées pour faire plaisir. L'idéal pour partager votre passion du bien-être.</p>
-                <div class="price">À partir de 49€</div>
-                <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
-            </div>
+                <h3 style="margin-top: 2rem;">Mode de Livraison</h3>
+                <div class="shipping-options">
+                    <label class="radio-option">
+                        <input type="radio" name="shipping" value="distance" checked onchange="updateShippingDisplay()">
+                        <span>Livraison à Distance <span id="shipping-distance-cost"></span></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="shipping" value="pickup" onchange="updateShipping(0)">
+                        <span>Retrait sur place (Gratuit)</span>
+                    </label>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Moyens de Paiement</h3>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span>💳 Carte bancaire</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <span>🅿️ PayPal</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="transfer">
+                        <span>🏦 Virement bancaire</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1rem;">
+                    Confirmer la Commande
+                </button>
+            </form>
         </div>
     </div>
-</section>
 
-<!-- ========== CTA SECTION ========== -->
-<section class="cta-section">
-    <div class="container">
-        <h2>Vous cherchez un cadeau ?</h2>
-        <p>Nos coffrets cadeaux sont parfaits pour toute occasion</p>
-        <button class="btn btn-primary btn-lg" onclick="window.location.href='contact.html'">Nous Contacter</button>
-    </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>À Propos</h4>
-                <ul>
-                    <li><a href="histoire.html">Notre Histoire</a></li>
-                    <li><a href="equipe.html">Notre Équipe</a></li>
-                </ul>
+    <!-- ========== MODAL CONFIRMATION ========== -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content confirmation">
+            <div class="confirmation-icon">✓</div>
+            <h2>Commande Confirmée !</h2>
+            <p>Merci <span id="customer-name"></span>, votre commande a été enregistrée.</p>
+            <div class="order-details">
+                <p><strong>Numéro de commande:</strong> <span id="order-number"></span></p>
+                <p><strong>Total:</strong> <span id="confirmation-total"></span></p>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">Un email de confirmation a été envoyé à
+                    votre adresse.</p>
             </div>
-
-            <div class="footer-section">
-                <h4>Produits</h4>
-                <ul>
-                    <li><a href="produits.html">Collections</a></li>
-                    <li><a href="produits.html">Formats</a></li>
-                    <li><a href="produits.html">Nouveautés</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Service Client</h4>
-                <ul>
-                    <li><a href="#">Livraison</a></li>
-                    <li><a href="#">Retours</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Suivez-nous</h4>
-                <ul class="social-links">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 La Fabric de Bougies. Tous droits réservés.</p>
+            <button class="btn btn-primary" onclick="continueShop()" style="width: 100%;">Continuer mes achats</button>
         </div>
     </div>
-</footer>
 
-<!-- PANIER LATÉRAL -->
-<div class="cart-sidebar" id="cart-sidebar">
-    <div class="cart-header">
-        <h3>Mon Panier</h3>
-        <button class="close-cart" onclick="toggleCart()">✕</button>
-    </div>
-    <div class="cart-items" id="cart-items">
-        <p class="empty-cart">Votre panier est vide</p>
-    </div>
-    <div class="cart-footer">
-        <div class="cart-total">
-            <span>Sous-total:</span>
-            <span id="cart-subtotal">0€</span>
+    <!-- ========== FORMATS DE PRODUITS ========== -->
+    <section class="produits" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Formats</h2>
+                <p class="subtitle">Choisissez le format qui vous convient</p>
+            </div>
+
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-icon">🪴</div>
+                    <h4>Bougies en Pot</h4>
+                    <p>Design élégant pour une ambiance chaleureuse. Parfaits pour le décor de votre intérieur.</p>
+                    <div class="price">À partir de 24€</div>
+                    <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-icon">💎</div>
+                    <h4>Bougies Décoratives</h4>
+                    <p>Formes originales et couleurs chatoyantes pour un style unique. Art et parfum réunis.</p>
+                    <div class="price">À partir de 19€</div>
+                    <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-icon">🎁</div>
+                    <h4>Coffrets Cadeaux</h4>
+                    <p>Collections curatées pour faire plaisir. L'idéal pour partager votre passion du bien-être.</p>
+                    <div class="price">À partir de 49€</div>
+                    <button class="btn btn-secondary" style="margin-top: 1rem;">Consulter</button>
+                </div>
+            </div>
         </div>
-        <button class="btn btn-primary" onclick="goToCheckout()" style="width: 100%; margin-top: 1rem;">Procéder à la commande</button>
-    </div>
-</div>
+    </section>
 
-<!-- OVERLAY PANIER -->
-<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Vous cherchez un cadeau ?</h2>
+            <p>Nos coffrets cadeaux sont parfaits pour toute occasion</p>
+            <button class="btn btn-primary btn-lg" onclick="window.location.href='contact.html'">Nous Contacter</button>
+        </div>
+    </section>
 
-<!-- MODAL COMMANDE -->
-<div class="modal" id="checkout-modal">
-    <div class="modal-content">
-        <button class="modal-close" onclick="closeCheckout()">✕</button>
-        <h2>Récapitulatif de Commande</h2>
-        
-        <div class="order-summary" id="order-summary"></div>
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="histoire.html">Notre Histoire</a></li>
+                        <li><a href="equipe.html">Notre Équipe</a></li>
+                    </ul>
+                </div>
 
-        <div class="order-totals">
-            <div class="total-row">
+                <div class="footer-section">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="produits.html">Collections</a></li>
+                        <li><a href="produits.html">Formats</a></li>
+                        <li><a href="produits.html">Nouveautés</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Service Client</h4>
+                    <ul>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <ul class="social-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Fabric de Bougies. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PANIER LATÉRAL -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mon Panier</h3>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Votre panier est vide</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
                 <span>Sous-total:</span>
-                <span id="modal-subtotal">0€</span>
+                <span id="cart-subtotal">0€</span>
             </div>
-            <div class="total-row">
-                <span>Livraison:</span>
-                <span id="shipping-cost">0€</span>
-            </div>
-            <div class="total-row total">
-                <span>Total:</span>
-                <span id="modal-total">0€</span>
-            </div>
+            <button class="btn btn-primary" onclick="goToCheckout()" style="width: 100%; margin-top: 1rem;">Procéder à
+                la commande</button>
         </div>
+    </div>
 
-        <form id="checkout-form">
-            <h3>Vos Informations</h3>
-            
-            <div class="form-group">
-                <label>Nom complet *</label>
-                <input type="text" required>
-            </div>
+    <!-- OVERLAY PANIER -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
 
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" required>
-            </div>
+    <!-- MODAL COMMANDE -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCheckout()">✕</button>
+            <h2>Récapitulatif de Commande</h2>
 
-            <div class="form-group">
-                <label>Téléphone *</label>
-                <input type="tel" required>
-            </div>
+            <div class="order-summary" id="order-summary"></div>
 
-            <div class="form-group">
-                <label>Adresse de livraison *</label>
-                <input type="text" required>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Code postal *</label>
-                    <input type="text" required>
+            <div class="order-totals">
+                <div class="total-row">
+                    <span>Sous-total:</span>
+                    <span id="modal-subtotal">0€</span>
                 </div>
-                <div class="form-group">
-                    <label>Ville *</label>
-                    <input type="text" required>
+                <div class="total-row">
+                    <span>Livraison:</span>
+                    <span id="shipping-cost">0€</span>
+                </div>
+                <div class="total-row total">
+                    <span>Total:</span>
+                    <span id="modal-total">0€</span>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" required>
-                    J'accepte les conditions de vente
-                </label>
-            </div>
+            <form id="checkout-form">
+                <h3>Vos Informations</h3>
 
-            <h3 style="margin-top: 2rem;">Mode de Livraison</h3>
-            <div class="shipping-options">
-                <label class="radio-option">
-                    <input type="radio" name="shipping" value="standard" checked onchange="updateShipping(8)">
-                    <span>Livraison Standard (8€ - 3-5 jours)</span>
-                </label>
-                <label class="radio-option">
-                    <input type="radio" name="shipping" value="express" onchange="updateShipping(15)">
-                    <span>Livraison Express (15€ - 24h)</span>
-                </label>
-                <label class="radio-option">
-                    <input type="radio" name="shipping" value="pickup" onchange="updateShipping(0)">
-                    <span>Retrait sur place (Gratuit)</span>
-                </label>
-            </div>
+                <div class="form-group">
+                    <label>Nom complet *</label>
+                    <input type="text" required>
+                </div>
 
-            <h3 style="margin-top: 2rem;">Moyens de Paiement</h3>
-            <div class="payment-methods">
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="card" checked>
-                    <span>💳 Carte bancaire</span>
-                </label>
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="paypal">
-                    <span>🅿️ PayPal</span>
-                </label>
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="transfer">
-                    <span>🏦 Virement bancaire</span>
-                </label>
-            </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" required>
+                </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1rem;">
-                Confirmer la Commande
-            </button>
-        </form>
-    </div>
-</div>
+                <div class="form-group">
+                    <label>Téléphone *</label>
+                    <input type="tel" required>
+                </div>
 
-<!-- MODAL CONFIRMATION -->
-<div class="modal" id="confirmation-modal">
-    <div class="modal-content confirmation">
-        <div class="confirmation-icon">✓</div>
-        <h2>Commande Confirmée !</h2>
-        <p>Merci <span id="customer-name"></span>, votre commande a été enregistrée.</p>
-        <div class="order-details">
-            <p><strong>Numéro de commande:</strong> <span id="order-number"></span></p>
-            <p><strong>Total:</strong> <span id="confirmation-total"></span></p>
-            <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">Un email de confirmation a été envoyé à votre adresse.</p>
+                <div class="form-group">
+                    <label>Adresse de livraison *</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Code postal *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ville *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" required>
+                        J'accepte les conditions de vente
+                    </label>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Mode de Livraison</h3>
+                <div class="shipping-options">
+                    <label class="radio-option">
+                        <input type="radio" name="shipping" value="standard" checked onchange="updateShipping(8)">
+                        <span>Livraison Standard (8€ - 3-5 jours)</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="shipping" value="express" onchange="updateShipping(15)">
+                        <span>Livraison Express (15€ - 24h)</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="shipping" value="pickup" onchange="updateShipping(0)">
+                        <span>Retrait sur place (Gratuit)</span>
+                    </label>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Moyens de Paiement</h3>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span>💳 Carte bancaire</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <span>🅿️ PayPal</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="transfer">
+                        <span>🏦 Virement bancaire</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1rem;">
+                    Confirmer la Commande
+                </button>
+            </form>
         </div>
-        <button class="btn btn-primary" onclick="continueShop()" style="width: 100%;">Continuer mes achats</button>
     </div>
-</div>
+
+    <!-- MODAL CONFIRMATION -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content confirmation">
+            <div class="confirmation-icon">✓</div>
+            <h2>Commande Confirmée !</h2>
+            <p>Merci <span id="customer-name"></span>, votre commande a été enregistrée.</p>
+            <div class="order-details">
+                <p><strong>Numéro de commande:</strong> <span id="order-number"></span></p>
+                <p><strong>Total:</strong> <span id="confirmation-total"></span></p>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">Un email de confirmation a été envoyé à
+                    votre adresse.</p>
+            </div>
+            <button class="btn btn-primary" onclick="continueShop()" style="width: 100%;">Continuer mes achats</button>
+        </div>
+    </div>
 
 </body>
+
 </html>
