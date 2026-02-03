@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -7,7 +7,7 @@
     <title>Nos Produits - La Fabric de Bougies</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="produits.css">
-    <link rel="stylesheet" href="livraison.js">
+    <script src="livraison.js" defer></script>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
                 <div class="produit-card" data-category="cosy">
                     <div class="produit-badge">Cosy</div>
                     <div class="produit-image"><img src="Image/Classique/Bougies Vanille et Cannelle.png"
-                            alt="Bougie Cosy"></div>
+                            alt="Vanille et Cannelle"></div>
                     <h4>Ambiance Cosy - Vanille, Cannelle</h4>
                     <p class="produit-desc">Vanille, Cannelle</p>
                     <div class="produit-details">
@@ -137,12 +137,12 @@
 
                 <div class="produit-card" data-category="cosy">
                     <div class="produit-badge">Cosy</div>
-                    <div class="produit-image"><img src="Image/Classique/Bougies Noix de coco.png" alt="Noix de coco">
+                    <div class="produit-image"><img src="Image/Classique/Bougies Clémentine.png" alt="Clémentine">
                     </div>
-                    <h4>Ambiance Cosy - Noix de coco</h4>
-                    <p class="produit-desc">Noix de coco</p>
+                    <h4>Ambiance Cosy - Clémentine</h4>
+                    <p class="produit-desc">Clémentine</p>
                     <div class="produit-details">
-                        <span class="badge-tag">Noix de coco</span>
+                        <span class="badge-tag">Clémentine</span>
                     </div>
                     <div class="price-section">
                         <span class="price">6€ - 10€</span>
@@ -150,19 +150,17 @@
                     </div>
                     <input type="number" class="quantity" min="1" value="1" max="10">
                     <button class="btn btn-secondary"
-                        onclick="openSizeModal('Ambiance Cosy - Noix de coco', this)">Ajouter au panier</button>
+                        onclick="openSizeModal('Ambiance Cosy - Clémentine', this)">Ajouter au panier</button>
                 </div>
 
                 <div class="produit-card" data-category="cosy">
                     <div class="produit-badge">Cosy</div>
-                    <div class="produit-image"><img src="Image/Classique/Bougies Fruit Rouges.png" alt="Fruit Rouges">
+                    <div class="produit-image"><img src="Image/Classique/Bougies Fruit du Dragon.png" alt="Fruit du Dragon">
                     </div>
-                    <h4>Ambiance Cosy - Fruit Rouges</h4>
-                    <p class="produit-desc">Fruit Rouges</p>
+                    <h4>Ambiance Cosy - Fruit du Dragon</h4>
+                    <p class="produit-desc">Fruit du Dragon</p>
                     <div class="produit-details">
-                        <span class="badge-tag">Fraise</span>
-                        <span class="badge-tag">Framboise</span>
-                        <span class="badge-tag">Myrtille</span>
+                        <span class="badge-tag">Fruit du Dragon</span>
                     </div>
                     <div class="price-section">
                         <span class="price">6€ - 10€</span>
@@ -170,46 +168,256 @@
                     </div>
                     <input type="number" class="quantity" min="1" value="1" max="10">
                     <button class="btn btn-secondary"
-                        onclick="openSizeModal('Ambiance Cosy - Fruit Rouges', this)">Ajouter au panier</button>
+                        onclick="openSizeModal('Ambiance Cosy - Fruit du Dragon', this)">Ajouter au panier</button>
                 </div>
 
                 <div class="produit-card" data-category="cosy">
                     <div class="produit-badge">Cosy</div>
-                    <div class="produit-image"><img src="Image/Classique/Bougies Framboise et Menthe Poivrée.png"
-                            alt="Framboise Menthe"></div>
-                    <h4>Ambiance Cosy - Framboise et Menthe Poivrée</h4>
-                    <p class="produit-desc">Framboise et Menthe Poivrée</p>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Délice Gourmand.png"
+                            alt="Délice Gourmand"></div>
+                    <h4>Ambiance Cosy - Délice Gourmand</h4>
+                    <p class="produit-desc">Délice Gourmand</p>
                     <div class="produit-details">
-                        <span class="badge-tag">Framboise</span>
-                        <span class="badge-tag">Menthe</span>
+                        <span class="badge-tag">Caramel</span>
+                        <span class="badge-tag">Chocolat</span>
+                        <span class="badge-tag">Noisette</span>
                     </div>
                     <div class="price-section">
-                        <span class="price">6€ - 10€</span>
+                        <span class="price">8€ - 12€</span>
                         <span class="stock">En stock</span>
                     </div>
                     <input type="number" class="quantity" min="1" value="1" max="10">
                     <button class="btn btn-secondary"
-                        onclick="openSizeModal('Ambiance Cosy - Framboise et Menthe Poivrée', this)">Ajouter au
+                        onclick="openSizeModal('Ambiance Cosy - Délice Gourmand', this)">Ajouter au
                         panier</button>
                 </div>
 
                 <div class="produit-card" data-category="cosy">
                     <div class="produit-badge">Cosy</div>
-                    <div class="produit-image"><img src="Image/Classique/Bougies Framboise et Menthe Poivrée.png"
-                            alt="Framboise Menthe"></div>
-                    <h4>Ambiance Cosy - Framboise et Menthe Poivrée</h4>
-                    <p class="produit-desc">Framboise et Menthe Poivrée</p>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Tarte au citron meringuée.png"
+                            alt="Tarte au citron meringuée"></div>
+                    <h4>Ambiance Cosy - Tarte au citron meringuée</h4>
+                    <p class="produit-desc">Tarte au citron meringuée</p>
                     <div class="produit-details">
-                        <span class="badge-tag">Framboise</span>
-                        <span class="badge-tag">Menthe</span>
+                        <span class="badge-tag">Citron</span>
+                        <span class="badge-tag">Meringue</span>
                     </div>
                     <div class="price-section">
-                        <span class="price">6€ - 10€</span>
+                        <span class="price">8€ - 12€</span>
                         <span class="stock">En stock</span>
                     </div>
                     <input type="number" class="quantity" min="1" value="1" max="10">
                     <button class="btn btn-secondary"
-                        onclick="openSizeModal('Ambiance Cosy - Framboise et Menthe Poivrée', this)">Ajouter au
+                        onclick="openSizeModal('Ambiance Cosy - Tarte au citron meringuée', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Crème Brulée.png" alt="Crème Brulée">
+                    </div>
+                    <h4>Ambiance Cosy - Crème Brulée</h4>
+                    <p class="produit-desc">Crème Brulée</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Vanille</span>
+                        <span class="badge-tag">Caramel</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">8€ - 12€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Crème Brulée', this)">Ajouter au panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Chocolat Chaud.png" alt="Chocolat Chaud">
+                    </div>
+                    <h4>Ambiance Cosy - Chocolat Chaud</h4>
+                    <p class="produit-desc">Chocolat Chaud</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Chocolat</span>
+                        <span class="badge-tag">Guimauve</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">8€ - 12€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Chocolat Chaud', this)">Ajouter au panier</button>
+                </div>
+
+                <div class="produit-card" data-category="cosy">
+                    <div class="produit-badge">Cosy</div>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Tiramisu.png"
+                            alt="Tiramisu"></div>
+                    <h4>Ambiance Cosy - Tiramisu</h4>
+                    <p class="produit-desc">Tiramisu</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Café</span>
+                        <span class="badge-tag">Biscuit</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">8€ - 12€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Tiramisu', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Classique/Bougies Feu de camp.png" alt="Feu de camp"></div>
+                    <h4>Ambiance Nature - Feu de camp</h4>
+                    <p class="produit-desc">Feu de camp</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Feu de camp</span>
+                        <span class="badge-tag">Bois</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">8€ - 12€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Feu de camp', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Automne.png" alt="Automne"></div>
+                    <h4>Ambiance Nature - Automne</h4>
+                    <p class="produit-desc">Automne</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Feuilles</span>
+                        <span class="badge-tag">Bois</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Automne', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Hiver.png" alt="Hiver"></div>
+                    <h4>Ambiance Nature - Hiver</h4>
+                    <p class="produit-desc">Hiver</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Menthe</span>
+                        <span class="badge-tag">Neige</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Hiver', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Nature Jardin Zen.png" alt="Jardin Zen"></div>
+                    <h4>Ambiance Nature - Jardin Zen</h4>
+                    <p class="produit-desc">Jardin Zen</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Thé vert</span>
+                        <span class="badge-tag">Bambou</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Jardin Zen', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Nuit Lavande.png" alt="Nuit Lavande"></div>
+                    <h4>Ambiance Nature - Nuit Lavande</h4>
+                    <p class="produit-desc">Nuit Lavande</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Lavande</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Nuit Lavande', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Fête des Fleurs.png" alt="Fête des Fleurs"></div>
+                    <h4>Ambiance Nature - Fête des Fleurs</h4>
+                    <p class="produit-desc">Fête des Fleurs</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Rose</span>
+                        <span class="badge-tag">Fleur de cerisier</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Fête des Fleurs', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Nature Foret Mystique.png" alt="Nature Foret Mystique"></div>
+                    <h4>Ambiance Nature - Nature Foret Mystique</h4>
+                    <p class="produit-desc">Nature Foret Mystique</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Bois de cèdre</span>
+                        <span class="badge-tag">Pin</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Nature Foret Mystique', this)">Ajouter au
+                        panier</button>
+                </div>
+
+                <div class="produit-card" data-category="nature">
+                    <div class="produit-badge">Nature</div>
+                    <div class="produit-image"><img src="Image/Nature/Bougies Océan Profond.png" alt="Océan Profond"></div>
+                    <h4>Ambiance Nature - Océan Profond</h4>
+                    <p class="produit-desc">Océan Profond</p>
+                    <div class="produit-details">
+                        <span class="badge-tag">Algues</span>
+                        <span class="badge-tag">Sable</span>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">9€ - 14€</span>
+                        <span class="stock">En stock</span>
+                    </div>
+                    <input type="number" class="quantity" min="1" value="1" max="10">
+                    <button class="btn btn-secondary"
+                        onclick="openSizeModal('Ambiance Cosy - Océan Profond', this)">Ajouter au
                         panier</button>
                 </div>
 
@@ -322,19 +530,20 @@
             <p id="size-product-name" style="color: #666; margin-bottom: 1.5rem;"></p>
 
             <div class="size-options">
-                <button class="size-btn" onclick="selectSize('Petite', 6)">
-                    <span class="size-label">Petite</span>
-                    <span class="size-price">6€</span>
-                </button>
-                <button class="size-btn" onclick="selectSize('Moyen', 8)">
-                    <span class="size-label">Moyen</span>
-                    <span class="size-price">8€</span>
-                </button>
-                <button class="size-btn" onclick="selectSize('Grande', 10)">
-                    <span class="size-label">Grande</span>
-                    <span class="size-price">10€</span>
-                </button>
-            </div>
+  <button class="size-btn" data-size="Petite">
+    <span class="size-label">Petite</span>
+    <span class="size-price">6€</span>
+  </button>
+  <button class="size-btn" data-size="Moyenne">
+    <span class="size-label">Moyenne</span>
+    <span class="size-price">8€</span>
+  </button>
+  <button class="size-btn" data-size="Grande">
+    <span class="size-label">Grande</span>
+    <span class="size-price">10€</span>
+  </button>
+</div>
+``
 
             <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="confirmSize()">
                 Ajouter au panier
@@ -406,8 +615,8 @@
                         <span>Livraison Standard (2€ - 3-5 jours)</span>
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="shipping" value="express" onchange="updateShipping(15)">
-                        <span>Livraison Express (15€ - 24h)</span>
+                        <input type="radio" name="shipping" value="express" onchange="updateShipping(10)">
+                        <span>Livraison Express (10€ - 24h)</span>
                     </label>
                     <label class="radio-option">
                         <input type="radio" name="shipping" value="pickup" onchange="updateShipping(0)">
@@ -622,22 +831,43 @@
 
         // === MODAL SÉLECTION TAILLE ===
         function openSizeModal(productName, button) {
-            currentProductName = productName;
-            const card = button.closest('.produit-card');
-            currentQuantity = parseInt(card.querySelector('.quantity').value) || 1;
+    currentProductName = productName;
+    const card = button.closest('.produit-card');
+    currentQuantity = parseInt(card.querySelector('.quantity').value) || 1;
 
-            document.getElementById('size-product-name').textContent = productName;
-            document.getElementById('size-modal').classList.add('active');
-            document.getElementById('size-modal-overlay').classList.add('active');
+    document.getElementById('size-product-name').textContent = productName;
+    document.getElementById('size-modal').classList.add('active');
+    document.getElementById('size-modal-overlay').classList.add('active');
 
-            selectedSize = null;
-            selectedPrice = 0;
-            const sizeButtons = document.querySelectorAll('.size-btn');
-            sizeButtons.forEach(btn => {
-                btn.style.background = 'white';
-                btn.style.color = 'var(--primary)';
-            });
-        }
+    // Détermine les prix selon si le produit est "premium"
+    const isPremium = premiumProducts.has(productName);
+    currentSizePrices = isPremium
+        ? { Petite: 8, Moyenne: 10, Grande: 12 }
+        : { Petite: 6, Moyenne: 8, Grande: 10 };
+
+    // Met à jour l'affichage des prix et les handlers
+    const sizeButtons = document.querySelectorAll('.size-btn');
+
+    sizeButtons.forEach(btn => {
+        const size = btn.dataset.size; // "Petite", "Moyenne", "Grande"
+        const priceSpan = btn.querySelector('.size-price');
+
+        // Affiche le bon prix
+        priceSpan.textContent = `${currentSizePrices[size]}€`;
+
+        // Réinitialise les styles (aucune sélection au départ)
+        btn.style.background = 'white';
+        btn.style.color = 'var(--primary)';
+
+        // Affecte dynamiquement le onclick avec les bons prix
+        btn.onclick = () => selectSize(size, currentSizePrices[size]);
+    });
+
+    // Réinitialise la sélection interne
+    selectedSize = null;
+    selectedPrice = 0;
+}
+
 
         function closeSizeModal() {
             document.getElementById('size-modal').classList.remove('active');
@@ -645,21 +875,21 @@
         }
 
         function selectSize(size, price) {
-            selectedSize = size;
-            selectedPrice = price;
+    selectedSize = size;
+    selectedPrice = price;
 
-            const sizeButtons = document.querySelectorAll('.size-btn');
-            sizeButtons.forEach(btn => {
-                btn.style.background = 'white';
-                btn.style.color = 'var(--primary)';
-            });
+    const sizeButtons = document.querySelectorAll('.size-btn');
+    sizeButtons.forEach(btn => {
+        btn.style.background = 'white';
+        btn.style.color = 'var(--primary)';
+    });
 
-            const selectedButton = Array.from(sizeButtons).find(btn => btn.innerText.includes(size));
-            if (selectedButton) {
-                selectedButton.style.background = 'var(--primary)';
-                selectedButton.style.color = 'white';
-            }
-        }
+    const selectedButton = Array.from(sizeButtons).find(btn => btn.dataset.size === size);
+    if (selectedButton) {
+        selectedButton.style.background = 'var(--primary)';
+        selectedButton.style.color = 'white';
+    }
+}
 
         function confirmSize() {
             if (!selectedSize) {
@@ -777,6 +1007,19 @@
                 document.getElementById('confirmation-modal').classList.remove('active');
             }
         });
+
+        // Bougies premium (de "Délice Gourmand" à "Feu de camp")
+const premiumProducts = new Set([
+    'Ambiance Cosy - Délice Gourmand',
+    'Ambiance Cosy - Tarte au citron meringuée',
+    'Ambiance Cosy - Crème Brulée',
+    'Ambiance Cosy - Chocolat Chaud',
+    'Ambiance Cosy - Tiramisu',
+    'Ambiance Cosy - Feu de camp'
+]);
+
+// Stocke les prix courants selon la sélection (mis à jour à l'ouverture du modal)
+let currentSizePrices = { Petite: 6, Moyenne: 8, Grande: 10 };
     </script>
 </body>
 
