@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffrets – La Fabric de Bougies</title>
+
+    <style>
+        /* --- STYLES DE TES MODALES (identiques à ta modale taille) --- */
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: white;
+            width: 90%;
+            max-width: 450px;
+            padding: 2rem;
+            border-radius: 12px;
+            z-index: 1002;
+            opacity: 0;
+            transition: 0.25s ease;
+            pointer-events: none;
+        }
+        .modal.active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.25s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .size-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--primary, #8b4513);
+            border-radius: 8px;
+            background: white;
+            color: var(--primary, #8b4513);
+            margin-bottom: 0.7rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .size-btn.active {
+            background: var(--primary, #8b4513);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--primary, #8b4513);
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            background: var(--primary, #8b4513);
+            padding: 0.7rem 1rem;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Créer un Coffret</h1>
+
+    <!-- --- BOUTONS D’OUVERTURE DES 3 COFFRETS --- -->
+    <div style="text-align:center; margin-top:2rem;">
+        <button class="btn-secondary" onclick="openCoffretModal('Coffret Cosy')">Coffret Cosy</button>
+        <button class="btn-secondary" onclick="openCoffretModal('Coffret Premium')">Coffret Premium</button>
+        <button class="btn-secondary" onclick="openCoffretModal('Coffret Nature')">Coffret Nature</button>
+        <button class="btn-secondary" onclick="openCoffretModal('Coffret Toute Catégorie')">Coffret Toute Catégorie</button>
+    </div>
+
+    <!-- --- MODALE COFFRET --- -->
+    <div class="modal" id="coffret-modal">
+        <div class="modal-content size-selection">
+            <button class="modal-close" onclick="closeCoffretModal()">✕</button>
+            <h2>Choisir les bougies</h2>
+            <p id="coffret-name" style="color: #666;"></p>
+            <p id="coffret-counter" style="font-weight: bold;">0 / 3 sélectionnées</p>
+
+            <div id="coffret-options" class="size-options"></div>
+
+            <button class="btn-primary" style="width:100%; margin-top:1.5rem;" onclick="confirmCoffret()">
+                Ajouter au panier
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="coffret-overlay" onclick="closeCoffretModal()"></div>
+
+    <script>
+        /* --- LISTES DE BOUGIES PAR CATÉGORIE --- */
+
+        const cosyList = [
+            'Ambiance Cosy - Vanille, Cannelle',
+            'Ambiance Cosy - Noix de coco',
+            'Ambiance Cosy - Fruit Rouges',
+            'Ambiance Cosy - Framboise et Menthe Poivrée',
+            'Ambiance Cosy - Clémentine',
+            'Ambiance Cosy - Fruit du Dragon'
+        ];
+
+        const premiumList = [
+            'Ambiance Cosy - Délice Gourmand',
+            'Ambiance Cosy - Tarte au citron meringuée',
+            'Ambiance Cosy - Crème Brulée',
+            'Ambiance Cosy - Chocolat Chaud',
+            'Ambiance Cosy - Tiramisu',
+            'Ambiance Cosy - Feu de camp'
+        ];
+
+        const natureList = [
+            'Ambiance Nature - Automne',
+            'Ambiance Nature - Hiver',
+            'Ambiance Nature - Jardin Zen',
+            'Ambiance Nature - Nuit Lavande',
+            'Ambiance Nature - Fête des Fleurs',
+            'Ambiance Nature - Nature Foret Mystique',
+            'Ambiance Nature - Océan Profond'
+        ];
+
+        const TouteList = [
+    'Ambiance Cosy - Vanille, Cannelle',
+    'Ambiance Cosy - Noix de coco',
+    'Ambiance Cosy - Fruit Rouges',
+    'Ambiance Cosy - Framboise et Menthe Poivrée',
+    'Ambiance Cosy - Clémentine',
+    'Ambiance Cosy - Fruit du Dragon',
+    'Ambiance Cosy - Délice Gourmand',
+    'Ambiance Cosy - Tarte au citron meringuée',
+    'Ambiance Cosy - Crème Brulée',
+    'Ambiance Cosy - Chocolat Chaud',
+    'Ambiance Cosy - Tiramisu',
+    'Ambiance Cosy - Feu de camp',
+    'Ambiance Nature - Automne',
+    'Ambiance Nature - Hiver',
+    'Ambiance Nature - Jardin Zen',
+    'Ambiance Nature - Nuit Lavande',
+    'Ambiance Nature - Fête des Fleurs',
+    'Ambiance Nature - Nature Foret Mystique',
+    'Ambiance Nature - Océan Profond'
+];
+
+        /* --- VARIABLES --- */
+        let currentCoffret = '';
+        let coffretSelection = [];
+        const coffretMax = 3;
+
+
+        /* --- OUVERTURE DE LA MODALE --- */
+        function openCoffretModal(type) {
+            currentCoffret = type;
+            coffretSelection = [];
+
+            const modal = document.getElementById('coffret-modal');
+            const overlay = document.getElementById('coffret-overlay');
+
+            document.getElementById('coffret-name').textContent = type;
+            document.getElementById('coffret-counter').textContent = `0 / ${coffretMax} sélectionnées`;
+
+            const options = document.getElementById('coffret-options');
+            options.innerHTML = "";
+
+            let list = [];
+            if (type === "Coffret Cosy") list = cosyList;
+            if (type === "Coffret Premium") list = premiumList;
+            if (type === "Coffret Nature") list = natureList;
+            if (type === "Coffret Toute Catégorie") list = TouteList;
+
+            list.forEach(name => {
+                const btn = document.createElement('button');
+                btn.classList.add('size-btn');
+                btn.textContent = name;
+
+                btn.onclick = () => toggleCoffretChoice(name, btn);
+
+                options.appendChild(btn);
+            });
+
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+
+        /* --- SÉLECTIONS DANS LE COFFRET --- */
+        function toggleCoffretChoice(name, element) {
+            const index = coffretSelection.indexOf(name);
+
+            if (index === -1) {
+                if (coffretSelection.length >= coffretMax) {
+                    alert("Vous avez atteint le maximum de bougies.");
+                    return;
+                }
+                coffretSelection.push(name);
+                element.classList.add("active");
+            } else {
+                coffretSelection.splice(index, 1);
+                element.classList.remove("active");
+            }
+
+            document.getElementById('coffret-counter').textContent =
+                `${coffretSelection.length} / ${coffretMax} sélectionnées`;
+        }
+
+
+        /* --- VALIDATION DU COFFRET --- */
+        function confirmCoffret() {
+            if (coffretSelection.length === 0) {
+                alert("Veuillez sélectionner au moins une bougie.");
+                return;
+            }
+
+            const itemName = `${currentCoffret} (${coffretSelection.join(', ')})`;
+
+            // Exemple : prix fixe de 20€ + 8€ par bougie supplémentaire
+            const price = 20 + (coffretSelection.length - 1) * 8;
+
+            alert(`Ajouté au panier :\n${itemName}\nPrix : ${price}€`);
+
+            closeCoffretModal();
+        }
+
+
+        /* --- FERMETURE --- */
+        function closeCoffretModal() {
+            document.getElementById('coffret-modal').classList.remove('active');
+            document.getElementById('coffret-overlay').classList.remove('active');
+        }
+    </script>
+
+</body>
+
+</html>
