@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conven'Sup</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Conven'Sup</div>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Tableau de bord</a></li>
+        <li><a href="#search">Rechercher</a></li>
+        <li><a href="#voeux">Mes Vœux</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard">
+      <div class="sidebar">
+        <h3>Filtres</h3>
+        <div class="filter-group">
+          <label for="domaine">Domaine</label>
+          <select id="domaine">
+            <option value="">Tous</option>
+            <option value="sciences">Sciences</option>
+            <option value="lettres">Lettres</option>
+            <option value="arts">Arts</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="region">Région</label>
+          <select id="region">
+            <option value="">Toutes</option>
+            <option value="ile-de-france">Île-de-France</option>
+            <option value="grand-est">Grand Est</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="niveau">Niveau</label>
+          <select id="niveau">
+            <option value="">Tous</option>
+            <option value="bac">Bac</option>
+            <option value="bac+2">Bac+2</option>
+            <option value="bac+3">Bac+3</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="search">Rechercher</label>
+          <input type="text" id="search" placeholder="Nom de la formation..." />
+        </div>
+        <button class="search-btn" id="searchBtn">Rechercher</button>
+      </div>
+
+      <div class="results">
+        <h2>Résultats de recherche</h2>
+        <div id="resultsContainer"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Conven'Sup - Simulateur d’Orientation</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Vœux -->
+  <div id="voeuxModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Mes Vœux</h3>
+      <div id="voeuxList"></div>
+      <button class="btn" id="clearVoeux">Effacer tous les vœux</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

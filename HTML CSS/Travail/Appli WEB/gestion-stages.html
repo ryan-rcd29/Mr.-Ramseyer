@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conven'Sup - Gestion Intégrée des Stages</title>
+    <link rel="Shortcut icon" href="lien" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles-stages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">📋</div>
+                    <div class="logo-text">
+                        <h1>Conven'Sup</h1>
+                        <p class="tagline">Plateforme de gestion des stages et conventions</p>
+                    </div>
+                </div>
+                <nav class="nav-principal">
+                    <button class="nav-btn active" onclick="afficherSection('dashboard')">
+                        <i class="fas fa-th-large"></i>
+                        <span>Tableau de Bord</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('promotion')">
+                        <i class="fas fa-users"></i>
+                        <span>Ma Promotion</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('stages')">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Gestion des Stages</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('tuteurs')">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <span>Tuteurs</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('calendar')">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Calendrier</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('rapports')">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Rapports</span>
+                    </button>
+                    <button class="nav-btn" onclick="afficherSection('parametres')">
+                        <i class="fas fa-cog"></i>
+                        <span>Paramètres</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Section Tableau de Bord -->
+            <section id="section-dashboard" class="section active">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-th-large"></i>
+                        <h2>Tableau de Bord</h2>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- KPI Cards -->
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(59, 102, 255, 0.1);">
+                            <i class="fas fa-users" style="color: #3b66ff;"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <div class="kpi-label">Total Étudiants</div>
+                            <div class="kpi-value">12</div>
+                            <div class="kpi-detail">Tous niveaux</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(0, 208, 132, 0.1);">
+                            <i class="fas fa-check-circle" style="color: #00d084;"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <div class="kpi-label">Stages Confirmés</div>
+                            <div class="kpi-value">8</div>
+                            <div class="kpi-detail">66.67%</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(255, 165, 0, 0.1);">
+                            <i class="fas fa-hourglass-half" style="color: #ffa500;"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <div class="kpi-label">En Recherche</div>
+                            <div class="kpi-value">4</div>
+                            <div class="kpi-detail">33.33%</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(0, 188, 212, 0.1);">
+                            <i class="fas fa-file-contract" style="color: #00bcd4;"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <div class="kpi-label">Conventions Signées</div>
+                            <div class="kpi-value">7</div>
+                            <div class="kpi-detail">87.5%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphiques et alertes -->
+                <div class="dashboard-bottom">
+                    <div class="alerts-box">
+                        <h3><i class="fas fa-bell"></i> Alertes & Tâches</h3>
+                        <div class="alert-item alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>Relance Needed:</strong> Jean Dupont - Depuis 5 jours
+                            </div>
+                        </div>
+                        <div class="alert-item alert-info">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <strong>Convention Pending:</strong> Pierre Bernard - Attente signature établissement
+                            </div>
+                        </div>
+                        <div class="alert-item alert-success">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Stage Started:</strong> Marie Martin - TechCorp SA depuis 3 jours
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3><i class="fas fa-clock"></i> Échéances à Venir</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-date">15/03</div>
+                            <div class="timeline-event">Début stage - Marie Martin</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">18/03</div>
+                            <div class="timeline-event">Signature convention - Sophie Lefevre</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">01/04</div>
+                            <div class="timeline-event">Début stage - Pierre Bernard</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Promotion -->
+            <section id="section-promotion" class="section active">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>Gestion de la Promotion</h2>
+                    </div>
+                    <button class="btn btn-primary" onclick="afficherFormulaire('nouvel-etudiant')">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter un étudiant</span>
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <input type="text" placeholder="Rechercher un étudiant..." class="search-input" id="search-etudiant">
+                    <select class="filter-select" id="filter-classe">
+                        <option value="">Toutes les classes</option>
+                        <option value="1A">1ère année</option>
+                        <option value="2A">2ème année</option>
+                        <option value="3A">3ème année</option>
+                    </select>
+                </div>
+
+                <div class="etudiants-grid">
+                    <!-- Étudiant 1 -->
+                    <div class="etudiant-card">
+                        <div class="card-header">
+                            <h3>Jean Dupont</h3>
+                            <span class="badge badge-1a">1A</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Email:</strong> jean.dupont@school.fr</p>
+                            <p><strong>Téléphone:</strong> 06 12 34 56 78</p>
+                            <p><strong>Statut Stage:</strong> <span class="status-en-attente">En attente</span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="afficherDetailEtudiant('jean-dupont')">Détails</button>
+                            <button class="btn btn-small btn-primary" onclick="afficherFormulaire('stage', 'jean-dupont')">Ajouter un stage</button>
+                        </div>
+                    </div>
+
+                    <!-- Étudiant 2 -->
+                    <div class="etudiant-card">
+                        <div class="card-header">
+                            <h3>Marie Martin</h3>
+                            <span class="badge badge-1a">1A</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Email:</strong> marie.martin@school.fr</p>
+                            <p><strong>Téléphone:</strong> 06 23 45 67 89</p>
+                            <p><strong>Statut Stage:</strong> <span class="status-confirmé">Confirmé</span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="afficherDetailEtudiant('marie-martin')">Détails</button>
+                            <button class="btn btn-small btn-success" onclick="afficherFormulaire('convention', 'marie-martin')">Gérer convention</button>
+                        </div>
+                    </div>
+
+                    <!-- Étudiant 3 -->
+                    <div class="etudiant-card">
+                        <div class="card-header">
+                            <h3>Pierre Bernard</h3>
+                            <span class="badge badge-2a">2A</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Email:</strong> pierre.bernard@school.fr</p>
+                            <p><strong>Téléphone:</strong> 06 34 56 78 90</p>
+                            <p><strong>Statut Stage:</strong> <span class="status-en-cours">En cours</span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="afficherDetailEtudiant('pierre-bernard')">Détails</button>
+                            <button class="btn btn-small btn-info" onclick="afficherFormulaire('convention', 'pierre-bernard')">Voir convention</button>
+                        </div>
+                    </div>
+
+                    <!-- Étudiant 4 -->
+                    <div class="etudiant-card">
+                        <div class="card-header">
+                            <h3>Sophie Lefevre</h3>
+                            <span class="badge badge-2a">2A</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Email:</strong> sophie.lefevre@school.fr</p>
+                            <p><strong>Téléphone:</strong> 06 45 67 89 01</p>
+                            <p><strong>Statut Stage:</strong> <span class="status-en-attente">En attente</span></p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="afficherDetailEtudiant('sophie-lefevre')">Détails</button>
+                            <button class="btn btn-small btn-primary" onclick="afficherFormulaire('stage', 'sophie-lefevre')">Ajouter un stage</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Gestion des Stages -->
+            <section id="section-stages" class="section">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-suitcase"></i>
+                        <h2>Gestion des Stages</h2>
+                    </div>
+                    <button class="btn btn-primary" onclick="afficherFormulaire('nouveau-stage')">
+                        <i class="fas fa-plus"></i>
+                        <span>Nouveau stage</span>
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <input type="text" placeholder="Rechercher un stage..." class="search-input">
+                    <select class="filter-select">
+                        <option value="">Tous les statuts</option>
+                        <option value="en-attente">En attente</option>
+                        <option value="confirmé">Confirmé</option>
+                        <option value="en-cours">En cours</option>
+                        <option value="terminé">Terminé</option>
+                    </select>
+                </div>
+
+                <div class="stages-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Étudiant</th>
+                                <th>Entreprise</th>
+                                <th>Début</th>
+                                <th>Fin</th>
+                                <th>Contact</th>
+                                <th>Convention</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marie Martin</td>
+                                <td>TechCorp SA</td>
+                                <td>15/03/2026</td>
+                                <td>30/05/2026</td>
+                                <td><span class="status-badge" style="background-color: #4CAF50;">Contactée</span></td>
+                                <td><span class="status-badge" style="background-color: #2196F3;">En cours</span></td>
+                                <td>
+                                    <button class="btn btn-xs btn-secondary" onclick="afficherDetailStage('marie-techcorp')">Détails</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pierre Bernard</td>
+                                <td>Innovation Labs</td>
+                                <td>01/04/2026</td>
+                                <td>30/06/2026</td>
+                                <td><span class="status-badge" style="background-color: #4CAF50;">Contactée</span></td>
+                                <td><span class="status-badge" style="background-color: #4CAF50;">Signée</span></td>
+                                <td>
+                                    <button class="btn btn-xs btn-secondary" onclick="afficherDetailStage('pierre-innovation')">Détails</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jean Dupont</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><span class="status-badge" style="background-color: #FF9800;">En cours</span></td>
+                                <td><span class="status-badge" style="background-color: #f44336;">Aucune</span></td>
+                                <td>
+                                    <button class="btn btn-xs btn-secondary" onclick="afficherDetailStage('jean-rien')">Détails</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section Tuteurs -->
+            <section id="section-tuteurs" class="section">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h2>Gestion des Tuteurs</h2>
+                    </div>
+                    <button class="btn btn-primary" onclick="afficherFormulaire('nouveau-tuteur')">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter un Tuteur</span>
+                    </button>
+                </div>
+
+                <div class="tuteurs-grid">
+                    <div class="tuteur-card">
+                        <div class="tuteur-header">
+                            <h3>Dr. Dupont</h3>
+                            <span class="specialite-badge">Informatique</span>
+                        </div>
+                        <p><strong>Email:</strong> dupont@school.fr</p>
+                        <p><strong>Téléphone:</strong> 01 23 45 67 89</p>
+                        <p><strong>Étudiants encadrés:</strong> 3</p>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="modifierTuteur()">Modifier</button>
+                            <button class="btn btn-small btn-danger" onclick="supprimerTuteur()">Supprimer</button>
+                        </div>
+                    </div>
+
+                    <div class="tuteur-card">
+                        <div class="tuteur-header">
+                            <h3>Mme Martin</h3>
+                            <span class="specialite-badge">Gestion</span>
+                        </div>
+                        <p><strong>Email:</strong> martin@school.fr</p>
+                        <p><strong>Téléphone:</strong> 01 34 56 78 90</p>
+                        <p><strong>Étudiants encadrés:</strong> 2</p>
+                        <div class="card-actions">
+                            <button class="btn btn-small btn-secondary" onclick="modifierTuteur()">Modifier</button>
+                            <button class="btn btn-small btn-danger" onclick="supprimerTuteur()">Supprimer</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Calendrier -->
+            <section id="section-calendar" class="section">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h2>Calendrier des Stages</h2>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="calendar-nav" onclick="moisPrecedent()">← </button>
+                            <h3 id="mois-actuel">Mars 2026</h3>
+                            <button class="calendar-nav" onclick="moisSuivant()"> →</button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+                        </div>
+                        <div id="calendar-days" class="calendar-days"></div>
+                    </div>
+                    
+                    <div class="events-list">
+                        <h3>Événements (Mars 2026)</h3>
+                        <div class="event-item" style="border-left: 4px solid #00d084;">
+                            <strong>15/03 - Début Stage</strong>
+                            <p>Marie Martin - TechCorp SA</p>
+                        </div>
+                        <div class="event-item" style="border-left: 4px solid #00bcd4;">
+                            <strong>18/03 - Signature Convention</strong>
+                            <p>Sophie Lefevre</p>
+                        </div>
+                        <div class="event-item" style="border-left: 4px solid #ffa500;">
+                            <strong>22/03 - Relance Contact</strong>
+                            <p>Jean Dupont</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Rapports -->
+            <section id="section-rapports" class="section">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-chart-pie"></i>
+                        <h2>Rapports et Statistiques</h2>
+                    </div>
+                </div>
+
+                <div class="rapports-grid">
+                    <!-- Statistiques globales -->
+                    <div class="rapport-box">
+                        <div class="rapport-header">Statistiques Globales</div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total étudiants:</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Stages confirmés:</span>
+                            <span class="stat-value">8</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">En recherche:</span>
+                            <span class="stat-value">4</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Conventions signées:</span>
+                            <span class="stat-value">7</span>
+                        </div>
+                    </div>
+
+                    <!-- Par classe -->
+                    <div class="rapport-box">
+                        <div class="rapport-header">Répartition par Classe</div>
+                        <div class="stat-item">
+                            <span class="stat-label">1ère année:</span>
+                            <span class="stat-value">5 étudiants</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">2ème année:</span>
+                            <span class="stat-value">4 étudiants</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">3ème année:</span>
+                            <span class="stat-value">3 étudiants</span>
+                        </div>
+                    </div>
+
+                    <!-- Statuts conventions -->
+                    <div class="rapport-box">
+                        <div class="rapport-header">Statut des Conventions</div>
+                        <div class="stat-item">
+                            <span class="stat-label">Initialement envoyées:</span>
+                            <span class="stat-value">8</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Signées entreprise/tuteur:</span>
+                            <span class="stat-value">8</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Signées étudiant/prof:</span>
+                            <span class="stat-value">7</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Signées établissement:</span>
+                            <span class="stat-value">7</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Paramètres -->
+            <section id="section-settings" class="section">
+                <div class="section-header">
+                    <div class="title-section">
+                        <i class="fas fa-cog"></i>
+                        <h2>Paramètres</h2>
+                    </div>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3><i class="fas fa-sliders-h"></i> Préférences Générales</h3>
+                        <div class="setting-item">
+                            <label>Année Scolaire</label>
+                            <select>
+                                <option>2025-2026</option>
+                                <option>2024-2025</option>
+                                <option>2023-2024</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Thème de l'application</label>
+                            <select>
+                                <option>Clair</option>
+                                <option>Sombre</option>
+                                <option>Auto</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Langue</label>
+                            <select>
+                                <option>Français</option>
+                                <option>Anglais</option>
+                                <option>Espagnol</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-bell"></i> Notifications</h3>
+                        <div class="setting-item checkbox">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Alertes pour les conventions non signées</span>
+                            </label>
+                        </div>
+                        <div class="setting-item checkbox">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Notifications pour les nouvelles demandes</span>
+                            </label>
+                        </div>
+                        <div class="setting-item checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <span>Rappels pour les tâches en attente</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-download"></i> Données</h3>
+                        <div class="setting-actions">
+                            <button class="btn btn-primary" onclick="exporterDonnees()">
+                                <i class="fas fa-download"></i>
+                                Exporter les données
+                            </button>
+                            <button class="btn btn-secondary" onclick="importerDonnees()">
+                                <i class="fas fa-upload"></i>
+                                Importer les données
+                            </button>
+                            <button class="btn btn-warning" onclick="genererRapportPDF()">
+                                <i class="fas fa-file-pdf"></i>
+                                Générer Rapport PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-shield-alt"></i> Sécurité</h3>
+                        <div class="setting-actions">
+                            <button class="btn btn-secondary" onclick="changerMotDePasse()">
+                                <i class="fas fa-key"></i>
+                                Changer le mot de passe
+                            </button>
+                            <button class="btn btn-secondary" onclick="afficherHistorique()">
+                                <i class="fas fa-history"></i>
+                                Historique des modifications
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Zone Dangereuse</h3>
+                        <div class="setting-actions">
+                            <button class="btn btn-danger" onclick="reinitialiserDonnees()">
+                                <i class="fas fa-trash"></i>
+                                Réinitialiser les données
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal pour afficher les détails d'un étudiant -->
+    <div id="modal-detail-etudiant" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal('modal-detail-etudiant')">&times;</span>
+            <h2>Détails de l'étudiant</h2>
+            <div class="detail-section">
+                <h3>Informations personnelles</h3>
+                <p><strong>Nom:</strong> Jean Dupont</p>
+                <p><strong>Email:</strong> jean.dupont@school.fr</p>
+                <p><strong>Téléphone:</strong> 06 12 34 56 78</p>
+                <p><strong>Classe:</strong> 1ère année</p>
+            </div>
+            <div class="detail-section">
+                <h3>Stages en cours</h3>
+                <p>Aucun stage actuellement.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour afficher les détails d'un stage -->
+    <div id="modal-detail-stage" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal('modal-detail-stage')">&times;</span>
+            <h2>Détails du Stage</h2>
+            
+            <div class="stage-detail-container">
+                <!-- Informations entreprise -->
+                <div class="detail-section">
+                    <h3>📍 Contact Entreprise</h3>
+                    <div class="info-box">
+                        <div class="info-row">
+                            <span class="label">Nom de l'entreprise:</span>
+                            <span class="value">TechCorp SA</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Coordonnées:</span>
+                            <span class="value">contact@techcorp.fr</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Téléphone:</span>
+                            <span class="value">01 23 45 67 89</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Adresse:</span>
+                            <span class="value">123 Avenue de la Technologie, 75001 Paris</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Mode de contact:</span>
+                            <span class="value">Email</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Date du contact:</span>
+                            <span class="value">15/02/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Réponse reçue:</span>
+                            <span class="value" style="color: #4CAF50;">✓ Oui</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Date relance:</span>
+                            <span class="value">22/02/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Mode relance:</span>
+                            <span class="value">Appel téléphonique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conventions -->
+                <div class="detail-section">
+                    <h3>📋 Suivi des Conventions</h3>
+                    <div class="convention-checklist">
+                        <div class="convention-item">
+                            <input type="checkbox" id="conv-1" checked>
+                            <label for="conv-1">Convention initiale envoyée</label>
+                            <span class="date-convention">15/02/2026</span>
+                        </div>
+                        <div class="convention-item">
+                            <input type="checkbox" id="conv-2" checked>
+                            <label for="conv-2">Convention signée par entreprise et tuteur</label>
+                            <span class="date-convention">18/02/2026</span>
+                        </div>
+                        <div class="convention-item">
+                            <input type="checkbox" id="conv-3" checked>
+                            <label for="conv-3">Convention signée par l'étudiant et professeur</label>
+                            <span class="date-convention">20/02/2026</span>
+                        </div>
+                        <div class="convention-item">
+                            <input type="checkbox" id="conv-4">
+                            <label for="conv-4">Convention signée par établissement et renvoyé</label>
+                            <span class="date-convention">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations du stage -->
+                <div class="detail-section">
+                    <h3>⏰ Informations du Stage</h3>
+                    <div class="info-box">
+                        <div class="info-row">
+                            <span class="label">Début du stage:</span>
+                            <span class="value">15/03/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Fin du stage:</span>
+                            <span class="value">30/05/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Durée:</span>
+                            <span class="value">11 semaines</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Sujet du stage:</span>
+                            <span class="value">Développement d'application web</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Maître de stage:</span>
+                            <span class="value">Dupont Pierre</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="fermerModal('modal-detail-stage')">Fermer</button>
+                <button class="btn btn-primary" onclick="afficherFormulaire('editer-stage')">Modifier</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Formulaire -->
+    <div id="modal-formulaire" class="modal">
+        <div class="modal-content modal-formulaire">
+            <span class="close" onclick="fermerModal('modal-formulaire')">&times;</span>
+            
+            <!-- Formulaire Nouvel Étudiant -->
+            <form id="form-nouvel-etudiant" class="formulaire-section hidden">
+                <h2>Ajouter un nouvel étudiant</h2>
+                <div class="form-group">
+                    <label for="nom-etudiant">Nom complet:</label>
+                    <input type="text" id="nom-etudiant" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-etudiant">Email:</label>
+                    <input type="email" id="email-etudiant" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel-etudiant">Téléphone:</label>
+                    <input type="tel" id="tel-etudiant" required>
+                </div>
+                <div class="form-group">
+                    <label for="classe-etudiant">Classe:</label>
+                    <select id="classe-etudiant" required>
+                        <option value="1A">1ère année</option>
+                        <option value="2A">2ème année</option>
+                        <option value="3A">3ème année</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-formulaire')">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Ajouter l'étudiant</button>
+                </div>
+            </form>
+
+            <!-- Formulaire Nouveau Stage -->
+            <form id="form-nouveau-stage" class="formulaire-section hidden">
+                <h2>Ajouter un nouveau stage</h2>
+                <div class="form-group">
+                    <label for="etudiant-stage">Étudiant:</label>
+                    <select id="etudiant-stage" required>
+                        <option value="">Sélectionnez un étudiant</option>
+                        <option value="jean-dupont">Jean Dupont</option>
+                        <option value="marie-martin">Marie Martin</option>
+                        <option value="pierre-bernard">Pierre Bernard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entreprise-stage">Entreprise:</label>
+                    <input type="text" id="entreprise-stage" required>
+                </div>
+                <div class="form-group">
+                    <label for="debut-stage">Date de début:</label>
+                    <input type="date" id="debut-stage" required>
+                </div>
+                <div class="form-group">
+                    <label for="fin-stage">Date de fin:</label>
+                    <input type="date" id="fin-stage" required>
+                </div>
+                <div class="form-group">
+                    <label for="sujet-stage">Sujet du stage:</label>
+                    <textarea id="sujet-stage" rows="4" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-formulaire')">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Créer le stage</button>
+                </div>
+            </form>
+
+            <!-- Formulaire Contact Entreprise -->
+            <form id="form-contact-entreprise" class="formulaire-section hidden">
+                <h2>Enregistrer un contact entreprise</h2>
+                <fieldset>
+                    <legend>Informations entreprise</legend>
+                    <div class="form-group">
+                        <label for="nom-entreprise">Nom de l'entreprise:</label>
+                        <input type="text" id="nom-entreprise" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-entreprise">Email:</label>
+                        <input type="email" id="email-entreprise" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-entreprise">Téléphone:</label>
+                        <input type="tel" id="tel-entreprise" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse-entreprise">Adresse:</label>
+                        <textarea id="adresse-entreprise" rows="3" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact initial</legend>
+                    <div class="form-group">
+                        <label for="mode-contact">Mode de contact:</label>
+                        <select id="mode-contact" required>
+                            <option value="">Sélectionnez un mode</option>
+                            <option value="email">Email</option>
+                            <option value="telephone">Téléphone</option>
+                            <option value="visite">Visite en personne</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-contact">Date du contact:</label>
+                        <input type="date" id="date-contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reponse">Réponse reçue:</label>
+                        <select id="reponse" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="oui">Oui</option>
+                            <option value="non">Non</option>
+                            <option value="en-attente">En attente</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Relance (si nécessaire)</legend>
+                    <div class="form-group">
+                        <label for="date-relance">Date de la relance:</label>
+                        <input type="date" id="date-relance">
+                    </div>
+                    <div class="form-group">
+                        <label for="mode-relance">Mode de relance:</label>
+                        <select id="mode-relance">
+                            <option value="">Sélectionnez un mode</option>
+                            <option value="email">Email</option>
+                            <option value="telephone">Appel téléphonique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-formulaire')">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer le contact</button>
+                </div>
+            </form>
+
+            <!-- Formulaire Convention -->
+            <form id="form-convention" class="formulaire-section hidden">
+                <h2>Suivi des conventions</h2>
+                <fieldset>
+                    <legend>État des signatures</legend>
+                    <div class="form-group checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="conv-envoyee" name="convention-initialement-envoyee">
+                            <label for="conv-envoyee">Convention initiale envoyée</label>
+                            <input type="date" id="date-conv-envoyee" class="date-input-small">
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="conv-ent-tuteur" name="convention-entreprise-tuteur">
+                            <label for="conv-ent-tuteur">Convention signée par entreprise et tuteur</label>
+                            <input type="date" id="date-conv-ent-tuteur" class="date-input-small">
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="conv-etud-prof" name="convention-etudiant-prof">
+                            <label for="conv-etud-prof">Convention signée par l'étudiant et professeur</label>
+                            <input type="date" id="date-conv-etud-prof" class="date-input-small">
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="conv-etabl" name="convention-etablissement">
+                            <label for="conv-etabl">Convention signée par établissement et renvoyé</label>
+                            <input type="date" id="date-conv-etabl" class="date-input-small">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Commentaires</legend>
+                    <div class="form-group">
+                        <textarea id="nota-convention" rows="4" placeholder="Commentaires ou notes importantes..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-formulaire')">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer la convention</button>
+                </div>
+            </form>
+
+            <!-- Formulaire Paramètres -->
+            <form id="form-settings" class="formulaire-section hidden">
+                <h2>Paramètres</h2>
+                <fieldset>
+                    <legend>Préférences Générales</legend>
+                    <div class="form-group">
+                        <label for="annee-scolaire">Année Scolaire</label>
+                        <select id="annee-scolaire">
+                            <option>2025-2026</option>
+                            <option>2024-2025</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="theme">Thème</label>
+                        <select id="theme">
+                            <option>Clair</option>
+                            <option>Sombre</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Nouveau Tuteur -->
+    <div id="modal-nouveau-tuteur" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal('modal-nouveau-tuteur')">&times;</span>
+            <h3>👨‍🏫 Ajouter un Tuteur</h3>
+            <form onsubmit="event.preventDefault(); ajouterTuteur();">
+                <div style="margin-bottom: 15px; padding: 12px; background: #f0f4ff; border-radius: 6px;">
+                    <p style="margin: 0; font-size: 14px; color: #3b66ff;">
+                        <i class="fas fa-info-circle"></i> Remplissez les informations du tuteur à ajouter
+                    </p>
+                </div>
+                <input type="text" placeholder="Nom du tuteur" required>
+                <input type="text" placeholder="Spécialité" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Téléphone" required>
+                <textarea placeholder="Observations..." style="margin-bottom: 15px;"></textarea>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-nouveau-tuteur')">Annuler</button>
+                    <button type="submit" class="btn btn-primary">✓ Ajouter le Tuteur</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Exportation Données -->
+    <div id="modal-export" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="close" onclick="fermerModal('modal-export')">&times;</span>
+            <h3>📥 Exporter les Données</h3>
+            <div style="background: linear-gradient(135deg, #f0f4ff, #f5f7fb); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #3b66ff; font-size: 14px;">Sélectionnez les données à exporter:</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid #dfe5f0; border-radius: 6px; cursor: pointer;">
+                    <input type="checkbox" id="export-etudiants" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                    <span>Tous les étudiants</span>
+                </label>
+                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid #dfe5f0; border-radius: 6px; cursor: pointer;">
+                    <input type="checkbox" id="export-stages" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                    <span>Tous les stages</span>
+                </label>
+                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid #dfe5f0; border-radius: 6px; cursor: pointer;">
+                    <input type="checkbox" id="export-conventions" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                    <span>Conventions</span>
+                </label>
+                <label style="display: flex; align-items: center; padding: 10px; border: 1px solid #dfe5f0; border-radius: 6px; cursor: pointer;">
+                    <input type="checkbox" id="export-tuteurs" checked style="margin-right: 10px; width: 18px; height: 18px;">
+                    <span>Tuteurs</span>
+                </label>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 10px; background: #f5f7fb; border-radius: 6px; font-size: 13px; color: #6b7280;">
+                <i class="fas fa-file"></i> Format: JSON | Taille estimée: ~45 KB
+            </div>
+            
+            <div class="form-actions" style="margin-top: 20px;">
+                <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-export')">Annuler</button>
+                <button type="button" class="btn btn-primary" onclick="downloadExportedData();">
+                    <i class="fas fa-download"></i> Télécharger le fichier
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Historique Complet -->
+    <div id="modal-historique" class="modal">
+        <div class="modal-content" style="max-width: 600px; max-height: 500px; overflow-y: auto;">
+            <span class="close" onclick="fermerModal('modal-historique')">&times;</span>
+            <h3>📜 Historique Complet des Modifications</h3>
+            
+            <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+                <div style="padding: 12px; border-left: 4px solid #00d084; background: #f0fdf4; border-radius: 6px;">
+                    <strong style="color: #00d084;">✓ 03/03/2026 15:45</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Ajout étudiant "Martin Sophie"</p>
+                </div>
+                <div style="padding: 12px; border-left: 4px solid #00bcd4; background: #f0f8fb; border-radius: 6px;">
+                    <strong style="color: #00bcd4;">✍️ 03/03/2026 15:30</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Signature convention "TechCorp SA"</p>
+                </div>
+                <div style="padding: 12px; border-left: 4px solid #3b66ff; background: rgba(59,102,255,0.05); border-radius: 6px;">
+                    <strong style="color: #3b66ff;">➕ 03/03/2026 15:15</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Création stage "Innovation Labs"</p>
+                </div>
+                <div style="padding: 12px; border-left: 4px solid #ffa500; background: #fff8f0; border-radius: 6px;">
+                    <strong style="color: #ffa500;">📝 02/03/2026 14:20</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Modification contact entreprise</p>
+                </div>
+                <div style="padding: 12px; border-left: 4px solid #00d084; background: #f0fdf4; border-radius: 6px;">
+                    <strong style="color: #00d084;">✓ 02/03/2026 13:45</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Ajout tuteur "Dr. Dupont"</p>
+                </div>
+                <div style="padding: 12px; border-left: 4px solid #3b66ff; background: rgba(59,102,255,0.05); border-radius: 6px;">
+                    <strong style="color: #3b66ff;">🚀 01/03/2026 10:30</strong>
+                    <p style="margin: 5px 0 0 0; color: #6b7280;">Initialisation application</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px; padding: 10px; background: #f5f7fb; border-radius: 6px; font-size: 13px; text-align: center; color: #6b7280;">
+                <p style="margin: 0;">Total: <strong>47 modifications</strong> | Période: <strong>01/03 - 03/03</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmation Suppression -->
+    <div id="modal-confirmation" class="modal">
+        <div class="modal-content" style="max-width: 400px;">
+            <span class="close" onclick="fermerModal('modal-confirmation')">&times;</span>
+            <div style="text-align: center; padding: 20px 0;">
+                <div style="font-size: 48px; margin-bottom: 15px;">⚠️</div>
+                <h3 id="confirmation-title" style="margin: 0 0 10px 0;">Confirmer la suppression</h3>
+                <p id="confirmation-message" style="color: #6b7280; margin: 0 0 20px 0;">Cette action est irréversible.</p>
+                
+                <div style="padding: 12px; background: #ff4757; background-color: rgba(255, 71, 87, 0.1); border-radius: 6px; margin-bottom: 20px;">
+                    <p style="margin: 0; color: #ff4757; font-weight: 600; font-size: 13px;">
+                        <i class="fas fa-exclamation-triangle"></i> Cette action ne peut pas être annulée!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="fermerModal('modal-confirmation')">
+                    Annuler
+                </button>
+                <button type="button" class="btn btn-danger" onclick="confirmAction()">
+                    <i class="fas fa-trash"></i> Supprimer définitivement
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-stages.js"></script>
+</body>
+</html>
